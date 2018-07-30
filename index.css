@@ -2,4 +2,15 @@ h1{
   color: black;
   background-color: #ccfcff;
   text-align: center;
+  margin-top: 50px;
+  margin-left: 100px;
+  font-family: 'Abril Fatface', cursive;
+  
+
+}
+
+
+h3{
+  font-family: 'Parisienne', cursive;
+  color: black;
 }
