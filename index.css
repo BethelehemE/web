@@ -6,7 +6,10 @@ body{
 #logo {
   max-width: 300%;
   height: auto;
-  margin: 30%;
+  margin-top: 33%;
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-bottom: 33%;
 }
 
 .centerImage {
