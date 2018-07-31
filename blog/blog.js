@@ -30,11 +30,11 @@ function showPost(){
   element.appendChild(pic1);
   var currentDiv = document.getElementById("div1");
   if(i%2 == 0){
-    element.setAttribute("class", "alert alert-light");
+    element.setAttribute("class", "alert alert-light shadow p-3 mb-5 bg-white rounded");
   }else{
-     element.setAttribute("class", "alert alert-secondary");
+     element.setAttribute("class", "alert alert-secondary shadow p-3 mb-5 bg-white rounded");
    }
-  document.body.insertBefore(element, currentDiv);
+  currentDiv.insertBefore(element, null);
 
 
   i++;
