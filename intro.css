@@ -1,6 +1,5 @@
 body{
-  background-color: #ccfcff;
-}
+    background-color:
 .circle {
     width: 25%;
     padding-top: 10%;
@@ -13,6 +12,8 @@ body{
     font-size: 50px;
     position: relative;
     text-align: center;
+
+
 }
 
 #text{
@@ -36,7 +37,7 @@ border-radius: 50%;
 }
 
 #firstrow {
-  margin-left: 30%;
+  margin-left: -3%;
   margin-right: auto;
 }
 #circ {
@@ -48,7 +49,7 @@ border-radius: 50%;
   margin-top: -8%;
   width: 100%;
   padding-top: 10%;
-  margin-left: 32%;
+  margin-left: 15%;
 }
 
 .row{
