@@ -36,14 +36,16 @@ i {
     width: 15px;
     padding: 3px;
 }
+
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+
 button {
     margin-left: 20%;
     background: transparent;
     border: none !important;
-    font-size:0;
+    font-size: 0;
     margin-top: 40%;
 }
