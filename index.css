@@ -8,6 +8,7 @@ body{
   float: left;
   margin-left: 10%;
   margin-right: -25%;
+  
 }
 
 h1{
@@ -35,11 +36,13 @@ i {
     height: 15px;
     width: 15px;
     padding: 3px;
+  
 }
 
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+  
 }
 
 button {
@@ -48,4 +51,5 @@ button {
     border: none !important;
     font-size: 0;
     margin-top: 40%;
+  
 }
