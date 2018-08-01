@@ -1,6 +1,5 @@
 body{
-    background-color: #ccfcff;
-    margin: 20%
+    background-color: #acfcff;
 }
 #logo{
     width: 100%;
@@ -11,4 +10,5 @@ body{
 
 .icons{
     padding:10%;
+    margin: 20%
 }
