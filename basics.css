@@ -1,15 +1,10 @@
-body{
-  background-color: #ebe7e1;
-  margin-top: 25px;
-  margin-left: 0px;
-}
-}
 #nav-list li {
   display: inline-block;
 }
-
-ul {
+#navhome {
   padding: 3px ;
+}
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -19,13 +14,6 @@ ul {
   width: 100%;
   background-color: #f3f3f3;
 }
-
-#navhome {
-  padding: 3px;
-  
-}
-  
-  
 .right{
   float:right;
   padding: 18px 12px;
@@ -42,24 +30,4 @@ li a:hover:not(.active) {
 li a.active {
     color: white;
     background-color: #4CAF50;
-}
-.column {
-    float: left;
-    width: 50%;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-row{
-  padding-left: 20%;
-}
-h1 {
-  margin-left: 20%;
-}
-
-ul.square {
-    list-style-type: square;
 }
