@@ -8,7 +8,7 @@ body{
   display: inline-block;
 }
 
-#nav-list{
+ul {
   padding: 3px ;
   list-style-type: none;
   margin: 0;
