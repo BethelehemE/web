@@ -19,8 +19,11 @@ body{
   background-color: #f3f3f3;
 }
 
-}
 #navhome {
+  padding: 3px;
+  
+}
+  
   
 .right{
   float:right;
