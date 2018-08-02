@@ -6,7 +6,8 @@ body{
 #nav-list li {
   display: inline-block;
 }
-#navhome {
+
+#nav-list{
   padding: 3px ;
   list-style-type: none;
   margin: 0;
@@ -17,6 +18,10 @@ body{
   width: 100%;
   background-color: #f3f3f3;
 }
+
+}
+#navhome {
+  
 .right{
   float:right;
   padding: 18px 12px;
