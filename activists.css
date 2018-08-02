@@ -27,6 +27,8 @@ li a {
     color: #666;
     text-align: center;
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+
 }
 li a:hover:not(.active) {
     background-color: #ddd;
