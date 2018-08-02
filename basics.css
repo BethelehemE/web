@@ -1,6 +1,7 @@
 body{
   background-color: #ebe7e1;
   margin-top: 25px;
+  margin-left: 0px;
 }
 #nav-list li {
   display: inline-block;
