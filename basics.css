@@ -52,3 +52,7 @@ row{
 h1 {
   margin-left: 20%;
 }
+
+ul.square {
+    list-style-type: square;
+}
