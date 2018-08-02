@@ -45,3 +45,10 @@ li a.active {
     display: table;
     clear: both;
 }
+
+row{
+  margin-left: 10%;
+}
+h1 {
+  margin-left: 10%;
+}
