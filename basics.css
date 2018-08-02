@@ -44,3 +44,10 @@ li a.active {
     display: table;
     clear: both;
 }
+#lcol{
+  margin-left: 20px;
+}
+#rcol{
+  margin-left: 20px;
+}
+
