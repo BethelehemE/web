@@ -27,6 +27,8 @@ li a {
     color: #666;
     text-align: center;
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+
 }
 li a:hover:not(.active) {
     background-color: #ddd;
@@ -49,12 +51,16 @@ li a.active {
   color: #666;
   text-align: left;
   text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+
 }
 #rcol{
   margin-left: 20px;
   color: #666;
   text-align: left;
   text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+
 }
 h1{
   margin-left: 10px;
