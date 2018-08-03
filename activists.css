@@ -37,28 +37,10 @@ li a.active {
     color: white;
     background-color: #4CAF50;
 }
-.profile{
-    box-sizing: border-box;
-    display: inline-block;
+h1{
+  margin-left: 10px;
+  font-family: 'Quicksand', sans-serif;
 }
-.column {
-  float: left;
-  padding: 10px;
-  height: 200px;
-}
-.colleft {
-  width: 25%;
-}
-.colright {
-  width: 75%;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/*grid*/
 .grid-container {
   display: grid;
   grid-template-columns: 25% 75%;
@@ -72,22 +54,7 @@ li a.active {
   font-size: 30px;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
-
 }
-
-h1{
-  font-family: 'Quicksand', sans-serif;
-  margin-top: 3%;
-  marign-bottom: 3%;
-  font-size: 60px;
-  text-align: center;
-
-}
-
-h3{
-  font-size: 50px;
-}
-
 #quote {
   font-size: 60px;
   text-align: center;
@@ -100,8 +67,7 @@ h3{
   padding-left: 10px;
   margin-top: -2%;
 }
-
-img{
+.profpic{
   width: 100%;
   height: auto;
 }
