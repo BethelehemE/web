@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <!--linking the js file  -->
+  <script src="blog.js" type="text/javascript"></script>
+  <!-- map box api -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- to make markers work -->
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- link JS  -->
+  <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
+  <style>
+    .he{
+      width: 75%;
+      height: 75%;
+    }
+    #mySearch {
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border:1px solid #ddd;
+    }
+    #one {
+      height: 180px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body onload = "populateMap();">
+  <!-- <p id = "lblCounter">.</p> -->
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-6">
+        <br><br><br><br>
+        <h2>Event Blog</h2>
+        <!--forms  -->
+        <label for="name">Name:</label>
+        <textarea class="form-control" rows="1" cols = "10" id="name"></textarea>
+
+        <label for="description">Description:</label>
+        <textarea class="form-control" rows="3" cols = "10" id="description"></textarea>
+
+        <label for="loc">Longitude:</label>
+        <textarea class="form-control" id= "long" rows="1" cols = "10"></textarea>
+
+        <label for="loc">Latitude:</label>
+        <textarea class="form-control" id= "lat" rows="1" cols = "10"></textarea>
+
+        <label for="tag">Tags:</label>
+        <textarea class="form-control" rows="1" cols = "10" id="tag"></textarea>
+
+        <label for="pic">Image Link:</label>
+        <textarea class="form-control" rows="1" cols = "10" id="pic"></textarea>
+
+        <br>
+        <!--  submit button-->
+        <button onclick="showPost(); showMarker();" type="button" class="btn btn-info">Submit post</button>
+        <!--  search bar-->
+        <div class="left">
+          <br>
+          <input type="text" id="mySearch" onkeyup="getList1()" placeholder="Search.." title="Type in a category">
+        </div>
+
+        <br><br>
+        <!-- base div and ul to search through the list and create posts -->
+        <div id = "div1" class="hello"> </div>
+        <ul id = "tagList" class = "fhf"></ul>
+
+      </div>
+        <br><br>
+        <!-- Shows Map on Screen -->
+        <div class = "col-md-6" id='mapboi' style='width: 450px; height: 800px;'><br><br><br><br><br></div>
+        <p>© Tanvi Khot, Savvy Gupta, and Rishma Mendhekar :)</p>
+        <script>
+
+          // creating the map and putting it at given coordinates when reloaded
+          var coordinatelist = [];
+          mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VwdGFzIiwiYSI6ImNqa2E3dWtlYTF1aW0zcG9oazBuMjN3ZWoifQ.VYMlnaKdcAuHgFdXkBVk9Q';
+          var mapp = new mapboxgl.Map({
+            container: 'mapboi',
+            style: 'mapbox://styles/mapbox/streets-v10',
+            center: [-122.03639030456543, 37.409334912568596],
+            zoom: 10
+          });
+          var mapLat = "";
+          var mapLon = "";
+          var lonArr = [];
+          var latArr = [];
+          function populateMap(){
+            Longitude = localStorage.getItem("Longitude");
+            Latitude = localStorage.getItem("Latitude");
+
+
+            if(Latitude === null || Latitude === "null" || Longitude === null || Longitude === "null"){
+              return;
+            }else{
+              var i = 0;
+              var a = 0;
+              while (i < Latitude.length){
+                if (i === 0){
+                  mapLat = Latitude.substring(0, Latitude.indexOf(","));
+                  i+= mapLat.length;
+                  latArr.push(mapLat);
+                }else if(i > 0 ){
+                  if(i === Latitude.length-1){
+                    break;
+                  }else if(Latitude.charAt(i) === ','){
+                    mapLat = Latitude.substring(i+1, Latitude.indexOf(",", i+ 1));
+                    latArr.push(mapLat);
+                    i+= mapLat.length + 1;
+                    if(i > Latitude.length){
+                      break;
+                    }
+                  }
+                }
+              }
+
+                while (a < Longitude.length){
+                  if (a === 0){
+                    mapLon = Longitude.substring(0, Longitude.indexOf(","));
+                    a+= mapLon.length;
+                    lonArr.push(mapLon);
+                  }else if(a > 0 ){
+                    if(a === Longitude.length-1){
+                      break;
+                    }else if(Longitude.charAt(a) === ','){
+                      mapLon = Longitude.substring(a+1, Longitude.indexOf(",", a+ 1));
+                      lonArr.push(mapLon);
+                      a += mapLon.length + 1;
+                      if(a > Longitude.length){
+                        break;
+                      }
+                    }
+                  }
+
+                } // AHHHHHHHH WHILE LOOOOOOOPPPPP
+
+              for(var x = 0; x < latArr.length; x++){
+
+                var marker = new mapboxgl.Marker({
+                  draggable: true
+                })
+                .setLngLat([
+                  lonArr[x], latArr[x]
+                ])
+                .addTo(mapp);
+              }
+
+            }
+
+          }
+
+          var Latitude;
+          var Longitude;
+          var latStorage;
+          var lonStorage;
+
+          function showMarker(){
+            var long = document.getElementById("long").value;
+            var lat = document.getElementById("lat").value;
+
+
+            latStorage = localStorage.getItem("Latitude");
+            lonStorage = localStorage.getItem("Longitude");
+            if(latStorage === null || latStorage === "null" || lonStorage === null || lonStorage === "null"){
+              Latitude = lat + ",";
+              Longitude = long+ ",";
+            }else{
+              Latitude = Latitude + lat+ "," ;
+              Longitude = Longitude + long + ",";
+            }
+            localStorage.setItem("Latitude", Latitude);
+            localStorage.setItem("Longitude", Longitude);
+            long = parseFloat(long);
+            lat = parseFloat(lat);
+
+            var marker = new mapboxgl.Marker({
+              draggable: true
+            })
+            .setLngLat([
+              long, lat
+            ])
+            .addTo(mapp);
+          }
+
+        </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+</html>
