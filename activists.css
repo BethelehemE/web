@@ -39,11 +39,12 @@ li a.active {
 }
 .profile{
     box-sizing: border-box;
+    display: inline-block;
 }
 .column {
-    float: left;
-    padding: 10px;
-    height: 300px;
+  float: left;
+  padding: 10px;
+  height: 300px;
 }
 .colleft {
   width: 25%;
