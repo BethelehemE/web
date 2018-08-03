@@ -77,15 +77,15 @@ li a.active {
 
 h1{
   font-family: 'Quicksand', sans-serif;
-  margin-top: 3%;
-  marign-bottom: 3%;
+  margin-top: 1%;
+  marign-bottom: 1%;
   font-size: 80px;
   text-align: center;
 
 }
 
 h3{
-  font-size: 30%;
+  font-size: 30px;
 }
 
 #quote {
