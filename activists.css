@@ -45,10 +45,10 @@ li a.active {
     padding: 10px;
     height: 300px;
 }
-.left {
+.colleft {
   width: 25%;
 }
-.right {
+.colright {
   width: 75%;
 }
 .row:after {
