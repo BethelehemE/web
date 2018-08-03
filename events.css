@@ -36,3 +36,46 @@ li a.active {
     color: white;
     background-color: #4CAF50;
 }
+#content {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    height: 200px;
+    width: 200px;
+
+}
+#content2 {
+    position: relative;
+}
+#content2 img {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    height: 200px;
+    width: 200px;
+
+}
+#content3 {
+    position: relative;
+}
+#content3 img {
+    position: absolute;
+    bottom: 600;
+    left: 0;
+    height: 200px;
+    width: 200px;
+
+}
+#content4 {
+    position: relative;
+}
+#content4 img {
+    position: absolute;
+    bottom: 600;
+    right: 0;
+    height: 200px;
+    width: 200px;
+}
