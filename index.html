@@ -18,7 +18,7 @@
         </div>
         <div id="rowtwo">
           <img src="pictures/blue.png" width="15%" height="auto">
-          <a href="blog.html"><img class="icons" src="pictures/iconblog.png" width="30%" height="auto"></a>
+          <a href="blog.html"><img class="icons" src="pictures/iconblog.png" width="30%" height="auto" onmouseover="switchimg(pictures/blogicon.jpg)></a>
           <a href="about.html"><img class="icons" src="pictures/iconabout.png" width="30%" height="auto"></a>
         </div>
               <div id="content">
@@ -39,4 +39,14 @@
           
       </div>
     </body>
+    <script>
+        function switchimg(x) {
+            x.style.width = "30%";
+            x.style.width = "auto";
+        }
+        function switchback(x) {
+            x.style.width = "30%";
+            x.style.height = "auto";
+        }
+    </script>
 </html>
