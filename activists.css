@@ -40,6 +40,7 @@ li a.active {
 h1{
   margin-left: 120px;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 .grid-container {
   display: grid;
@@ -110,4 +111,12 @@ h1{
   z-index:100;
   height: 200px;
   width: 200px;
+}
+
+#rcol{
+  margin-left: 10%;
+}
+
+#lcol{
+  margin-right: 10%;
 }
