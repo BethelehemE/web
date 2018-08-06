@@ -20,7 +20,7 @@ body{
 }
 #content img {
   position:fixed;
-  top:55px;
+  top:0px;
   left:auto;
   right:0;
   z-index:100;
@@ -32,7 +32,7 @@ body{
 }
 #content2 img {
   position:fixed;
-  top:55px;
+  top:0px;
   left:0;
   right:auto;
   z-index:100;
