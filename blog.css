@@ -43,7 +43,7 @@ li a.active {
       }
       #content img {
         position:fixed;
-        top:55px;
+        top:70px;
         left:auto;
         right:0;
         z-index:100;
@@ -55,7 +55,7 @@ li a.active {
       }
       #content2 img {
         position:fixed;
-        top:55px;
+        top:70px;
         left:0;
         right:auto;
         z-index:100;
