@@ -50,8 +50,9 @@ li a.active {
     position: relative;
  }
 h1{
-  margin-left: 60px;
+  margin-left: 0px;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 p{
   margin-left: 10px;
