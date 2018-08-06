@@ -40,12 +40,14 @@ li a.active {
 #images{
     text-align:center;
     margin:50px auto;
+    position: relative;
 }
 #images a{
     margin-top: 60px;
     display:inline-block;
     text-decoration:none;
     color:black;
+    position: relative;
  }
 h1{
   margin-left: 10px;
