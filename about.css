@@ -58,3 +58,7 @@ p{
   font-family: 'Quicksand', sans-serif;
 }
 
+#shirt1{
+  position: relative;
+  margin-left: 40px;
+}
