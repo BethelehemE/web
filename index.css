@@ -2,9 +2,10 @@ body{
     background-color: #ccfcff;
 }
 #logo{
-    width: 80%;
+    width: 100%;
     height: auto;
-    margin:0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
 }
 #rowone{
