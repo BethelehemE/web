@@ -49,6 +49,10 @@ li a.active {
     color:black;
     position: relative;
  }
+.shirt {
+  display: flex;
+  justify-content: center;
+}
 h1{
   font-family: 'Quicksand', sans-serif;
   text-align: center;
