@@ -1,6 +1,16 @@
 var list1 = [];
 var blogPosts = [];
 
+// creating the map and putting it at given coordinates when reloaded
+var coordinatelist = [];
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VwdGFzIiwiYSI6ImNqa2E3dWtlYTF1aW0zcG9oazBuMjN3ZWoifQ.VYMlnaKdcAuHgFdXkBVk9Q';
+var mapp = new mapboxgl.Map({
+  container: 'mapboi',
+  style: 'mapbox://styles/mapbox/streets-v9',
+  center: [-122.03639030456543, 37.409334912568596],
+  zoom: 10
+});
+
 function showPost(){
   // getting the elements from the text areas
   var data = {};
@@ -8,10 +18,10 @@ function showPost(){
   data.description = document.getElementById("description").value;
   data.pic = document.getElementById("pic").value;
   data.tag = document.getElementById("tag").value;
-  //data.address = document.getElementById("address").value;
+  data.address = document.getElementById("address").value;
   data.likes = 0;
   blogPosts.push(data);
-  // addToMap(data.address, blogPosts.length -1);
+  addToMap(data.address, blogPosts.length -1);
   addToPage2(data, blogPosts.length -1);
   saveData();
   $('#addform')[0].reset();
@@ -44,7 +54,7 @@ function addToPage2(data, index) {
   newDiv.find(".blogtitle").text("Title: " + data.name);
   newDiv.find(".blogdescription").text(data.description);
   newDiv.find(".blogtags").text("Tags: " + data.tag);
- // newDiv.find(".bloglocation").text("Location: " + data.address);
+  newDiv.find(".bloglocation").text("Location: " + data.address);
   newDiv.find(".bloglikes").text("Likes: " + data.likes);
   newDiv.find(".bloglikes").attr("id", "likeBtn" + index);
   newDiv.find(".blogimg").attr("src", data.pic);
@@ -136,6 +146,29 @@ function likePost(index){
   numLikes = blogPosts[index].likes = blogPosts[index].likes + 1;
   document.getElementById("likeBtn" + index).innerHTML = "Likes: " + numLikes;
    saveData();
+}
+function addMarker(Longitude, Latitude) {
+  var marker = new mapboxgl.Marker({
+  })
+  .setLngLat([
+    Longitude, Latitude
+  ])
+  .addTo(mapp);
+}
+function addToMap(address, index) {
+	$.ajax("https://www.mapquestapi.com/geocoding/v1/address?key=l7s93voA4rSOre3CAz07hjsAZuV7JACm&inFormat=kvp&outFormat=json&location=" + address + "&thumbMaps=false", {
+		success: function(data) {
+      	Longitude = data.results[0].locations[0].latLng.lng;
+      	Latitude = data.results[0].locations[0].latLng.lat;
+        addMarker(Longitude, Latitude);
+        blogPosts[index].lat = Latitude;
+        blogPosts[index].lng = Longitude;
+        saveData();
+      },
+      error: function() {
+         $('#notification-bar').text('An error occurred');
+      }
+   });
 }
 
 function getList1(){
