@@ -118,22 +118,22 @@ h1{
 
 #slideshow {
   overflow: hidden;
-  height: 800px;
-  width: 800px;
+  height: 600px;
+  width: 600px;
   margin: auto;
   
   text-align: center;
 }
 
 .slide-wrapper {
-  width: 3200px; /* width * number of images */
+  width: 2400px; /* width * number of images */
   -webkit-animation: slide 10s ease infinite;
 }
 
 .slide {
   float: left;
-  height: 800px;
-  width: 800px;
+  height: 600px;
+  width: 600px;
 }
 
 .slide:nth-child(1) {
@@ -160,12 +160,12 @@ h1{
 
 @-webkit-keyframes slide {
   20% {margin-left: 0px;}
-  30% {margin-left: -800px;}   /*width*/
-  50% {margin-left: -800px;}
-  60% {margin-left: -1600px;} /*width*2*/
-  70% {margin-left: -1600px;}
-  80% {margin-left: -2400px;} /*width*3*/
-  90% {margin-left: -2400px;}
+  30% {margin-left: -600px;}   /*width*/
+  50% {margin-left: -600px;}
+  60% {margin-left: -1200px;} /*width*2*/
+  70% {margin-left: -1200px;}
+  80% {margin-left: -1800px;} /*width*3*/
+  90% {margin-left: -1800px;}
 }
 
 #credit{
