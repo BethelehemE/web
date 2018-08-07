@@ -1,5 +1,4 @@
 body {
-  padding: 5%;
   background-color: #ebe7e1;
   margin:0;
 }
@@ -9,6 +8,8 @@ body {
   height: 800px;
   width: 800px;
   margin: 0 auto;
+  padding: 5%;
+
 }
 
 .slide-wrapper {
