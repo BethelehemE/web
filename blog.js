@@ -2,14 +2,14 @@ var list1 = [];
 var blogPosts = [];
 
 // creating the map and putting it at given coordinates when reloaded
-var coordinatelist = [];
-mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VwdGFzIiwiYSI6ImNqa2E3dWtlYTF1aW0zcG9oazBuMjN3ZWoifQ.VYMlnaKdcAuHgFdXkBVk9Q';
-var mapp = new mapboxgl.Map({
-  container: 'mapboi',
-  style: 'mapbox://styles/mapbox/streets-v9',
-  center: [-122.03639030456543, 37.409334912568596],
-  zoom: 10
-});
+// var coordinatelist = [];
+// mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VwdGFzIiwiYSI6ImNqa2E3dWtlYTF1aW0zcG9oazBuMjN3ZWoifQ.VYMlnaKdcAuHgFdXkBVk9Q';
+// var mapp = new mapboxgl.Map({
+//   container: 'mapboi',
+//   style: 'mapbox://styles/mapbox/streets-v9',
+//   center: [-122.03639030456543, 37.409334912568596],
+//   zoom: 10
+// });
 
 function showPost(){
   // getting the elements from the text areas
