@@ -16,12 +16,12 @@ function showPost(){
   var data = {};
   data.name = document.getElementById("title").value;
   data.description = document.getElementById("description").value;
-  data.pic = document.getElementById("pic").value;
+//   data.pic = document.getElementById("pic").value;
   data.tag = document.getElementById("tag").value;
-  data.address = document.getElementById("address").value;
+//   data.address = document.getElementById("address").value;
   data.likes = 0;
   blogPosts.push(data);
-  addToMap(data.address, blogPosts.length -1);
+//   addToMap(data.address, blogPosts.length -1);
   addToPage2(data, blogPosts.length -1);
   saveData();
   $('#addform')[0].reset();
@@ -37,13 +37,13 @@ function loadData() {
 		for (var i=blogPosts.length -1; i >= 0; i--) {
 		    var blogPost = blogPosts[i];
 		    addToPage2(blogPost, i);
-        if (blogPost.lat && blogPost.lng) {
-          addMarker(blogPost.lng, blogPost.lat);
-          console.log("Used saved lat/lng");
-        } else {
-		      addToMap(blogPost.address, i);
-          console.log("Used address geocoding service.");
-        }
+//         if (blogPost.lat && blogPost.lng) {
+//           addMarker(blogPost.lng, blogPost.lat);
+//           console.log("Used saved lat/lng");
+//         } else {
+// 		      addToMap(blogPost.address, i);
+//           console.log("Used address geocoding service.");
+//         }
 		}
     saveData();
 	}
@@ -54,10 +54,10 @@ function addToPage2(data, index) {
   newDiv.find(".blogtitle").text("Title: " + data.name);
   newDiv.find(".blogdescription").text(data.description);
   newDiv.find(".blogtags").text("Tags: " + data.tag);
-  newDiv.find(".bloglocation").text("Location: " + data.address);
+//   newDiv.find(".bloglocation").text("Location: " + data.address);
   newDiv.find(".bloglikes").text("Likes: " + data.likes);
   newDiv.find(".bloglikes").attr("id", "likeBtn" + index);
-  newDiv.find(".blogimg").attr("src", data.pic);
+//   newDiv.find(".blogimg").attr("src", data.pic);
   newDiv.find(".deletebtn").attr("onclick", "deletePost(" + index + ");");
   newDiv.find(".likebtn").attr("onclick", "likePost(" + index + ");");
   newDiv.attr("id", "blogPost" + index);
@@ -72,9 +72,9 @@ function addToPage(data, index) {
   title1.appendChild(title2);
 
   // image displaying
-  var pic1 = document.createElement("img");
-  pic1.setAttribute("src", data.pic);
-  pic1.setAttribute("class", "he");
+//   var pic1 = document.createElement("img");
+//   pic1.setAttribute("src", data.pic);
+//   pic1.setAttribute("class", "he");
 
   // description printing
   var description1 = document.createElement("p");
@@ -120,7 +120,7 @@ function addToPage(data, index) {
   element.appendChild(tag1);
   element.appendChild(add1);
   element.appendChild(description1);
-  element.appendChild(pic1);
+//   element.appendChild(pic1);
   element.appendChild(document.createElement("p"));
   element.appendChild(but0);
   element.appendChild(numlike);
