@@ -19,7 +19,7 @@ ul {
   background-color: #f3f3f3;
 }
 .right{
-  float:right;
+  float:left;
   padding: 18px 12px;
 }
 li a {
