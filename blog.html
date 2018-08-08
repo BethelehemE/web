@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>cactivism - Blog</title>
+      <title>activism - Blog</title>
       <link rel="icon" type="image/png" href="pictures/cacti.png">
       <link rel="stylesheet" src="blog.css" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -18,32 +18,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   </head>
 <body onload="loadData();">
+  <div>
+     <ul id="nav-list">
+         <li id="navhome"><a href="index.html"><img src="pictures/cactivismtr.png" height="45"></a></li>
+         <li id="navabout" class="right"><a href="about.html">About</a></li>
+         <li id="navblog" class="right"><a href="blog.html">Blog</a></li>
+         <li id="navactivists" class="right"><a href="activists.html">Activists</a></li>
+         <li id="navevents" class="right"><a href="events.html">Events</a></li>
+         <li id="navbasics" class="right"><a href="basics.html">Basics</a></li>
+     </ul>
+  </div>
   <div class = "container">
     <div class = "row">
       <div class = "col-md-6">
-        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light" >
-      <div class="collapse navbar-collapse" id="navbarCollapse" >
-        
-        <ul id="nav-list" class="navbar-nav mt-2 mt-md-0">
-          <li id="navhome"><a href="index.html"><img src="pictures/cactivismtr.png" height="45" ></a></li>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <li id="navbasics" class="right"><a href="basics.html">Basics</a></li>
-          <li id="navevents" class="right"><a href="events.html">Events</a></li>
-          <li id="navactivists" class="right"><a href="activists.html">Activists</a></li>
-          <li id="navblog" class="right"><a href="blog.html">Blog</a></li>
-          <li id="navabout" class="right"><a href="about.html">About</a></li>
-         
-<!--           <li class="nav-item active"> </li>-->
-          
-        </ul>
-      </div>
+        <div id = "div0" style="margin-top: 100px;"> </div>
+        <div id="searchbar">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Entry</button>&nbsp;&nbsp;<input id="mySearch" class="form-control mr-sm-2" onkeyup="getList1()" type="search" placeholder="Search..." aria-label="Search...">
+        </div>
+<!--         <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light" >
+        <div class="collapse navbar-collapse" id="navbarCollapse" >
+       
+      </div> 
+  </nav>-->
 
         <!-- Trigger the modal with a button -->
-    </nav>
-    <div id = "div0" style="margin-top: 100px;"> </div>
-    <div id="searchbar">
-      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Entry</button>&nbsp;&nbsp;<input id="mySearch" class="form-control mr-sm-2" onkeyup="getList1()" type="search" placeholder="Search..." aria-label="Search...">
-    </div>
+  
+    
     <div id="postcopy" class="shadow p-3 mb-5 bg-white rounded" style="display: none;">
     <div class="row">
       <div class="col-md-10">
