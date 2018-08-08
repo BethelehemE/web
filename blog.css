@@ -10,14 +10,13 @@ body{
 }
 ul {
   list-style-type: none;
-  margin-top: 20px;
+  margin: 0;
   padding: 0;
   overflow: hidden;
-  position: center;
+  position: fixed;
   top: 0;
-  height: 10%;
   width: 100%;
-  background-color: #FAFAFA;
+  background-color: #f3f3f3;
 }
 .right{
   float:right;
@@ -25,10 +24,11 @@ ul {
 }
 li a {
     display: block;
-    color: black;
+    color: #666;
     text-align: center;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
+
 }
 li a:hover:not(.active) {
     background-color: #ddd;
@@ -37,6 +37,32 @@ li a.active {
     color: white;
     background-color: #4CAF50;
 }
+#images{
+    text-align:center;
+    margin:50px auto;
+    position: relative;
+}
+#images a{
+    margin-top: 60px;
+    display:inline-block;
+    text-decoration:none;
+    color:black;
+    position: relative;
+ }
+.shirt {
+  display: flex;
+  justify-content: center;
+}
+h1{
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+p{
+  margin-left: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
 #content {
         position: relative;
       }
@@ -85,17 +111,17 @@ li a.active {
         height: 200px;
         width: 200px;
       }
-    .he{
-      width: 75%;
-      height: 75%;
-    }
-    #one {
-      height: 180px;
-    }
-    .marker {
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
+.he{
+  width: 75%;
+  height: 75%;
+}
+#one {
+  height: 180px;
+}
+.marker {
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
