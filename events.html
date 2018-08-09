@@ -128,6 +128,16 @@ li a.active {
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body onload="loadData();">
+  <div>
+     <ul id="nav-list">
+         <li id="navhome"><a href="index.html"><img src="pictures/cactivismtr.png" height="45"></a></li>
+         <li id="navabout" class="right"><a href="about.html">About</a></li>
+         <li id="navblog" class="right"><a href="blog.html">Blog</a></li>
+         <li id="navactivists" class="right"><a href="activists.html">Activists</a></li>
+         <li id="navevents" class="right"><a href="events.html">Events</a></li>
+         <li id="navbasics" class="right"><a href="basics.html">Basics</a></li>
+     </ul>
+  </div>
   <!-- <div>
 
     </div> -->
@@ -135,43 +145,18 @@ li a.active {
   <div class = "container">
     <div class = "row">
       <div class = "col-md-6">
-        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-      <!-- <a class="navbar-brand" href="#"><h1>Events Blog</h1></a> -->
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <!-- <ul >
-
-        </ul> -->
-        <ul class="navbar-nav mt-2 mt-md-0" id="nav-list">
-          <li id="navhome"><a href="index.html"><img src="pictures/cactivismtr.png" height="45" ></a></li>
-          <li id="navabout" class="right"><a href="about.html">About</a></li>
-          <li id="navblog" class="right"><a href="blog.html">Blog</a></li>
-          <li id="navactivists" class="right"><a href="activists.html">Activists</a></li>
-          <li id="navevents" class="right"><a href="events.html">Events</a></li>
-          <li id="navbasics" class="right"><a href="basics.html">Basics</a></li>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <li class="nav-item active">
-          </li>
-        </ul>
-      </div>
-          <div class = "container">
-    <div class = "row">
-      <div class = "col-md-6">
         <div id = "div0" style="margin-top: 100px;"> </div>
         <div id="searchbar">
-          <div id="searchentry"><input id="mySearch" class="form-control mr-sm-2" onkeyup="getList1()" type="search" placeholder="Search for tags..." aria-label="Search for tags..."></div>
-          <div id="addentrybutton"> <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Entry</button>&nbsp;&nbsp;</div>
+          <div id="searchentry">
+            <input id="mySearch" class="form-control mr-sm-2" onkeyup="getList1()" type="search" placeholder="Search for tags..." aria-label="Search for tags...">
+          </div>
+          <div id="addentrybutton">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Entry</button>&nbsp;&nbsp;
+          </div>
         </div>
       </div>
-            </div>
-            
-           
-        <!-- <form class="form-inline my-2 my-lg-0"> -->
-<!--           <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Entry</button>&nbsp;&nbsp;
-          <input id="mySearch" class="form-control mr-sm-2" onkeyup="getList1()" type="search" placeholder="Search for tags..." aria-label="Search for tags..."> -->
-        <!-- </form> -->
-        <!-- Trigger the modal with a button -->
-    </nav>
-    <div id = "div0" style="margin-top: 100px;"> </div>
+    </div>
+  </div>
     <div id="postcopy" class="shadow p-3 mb-5 bg-white rounded" style="display: none;">
     <div class="row">
       <div class="col-md-10">
